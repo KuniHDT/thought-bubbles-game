@@ -13,6 +13,7 @@ signal message_finished
 
 var active = false
 var message_id = 0
+var problem_data : Resource
 
 var chars_to_display = 0.0
 var tags = []
@@ -43,23 +44,25 @@ func change_messages(new_array:Array):
 	message_id = 0
 	active = false
 
-func start_dialogue():
+func start_dialogue(problem_data:Resource):
 	message_id = -1
 	
-	next_message()
+	next_message(problem_data)
 	emit_signal("dialogue_started")
 
-func next_message():
+func next_message(problem_data:Resource):
 	message_id+=1
 	visible_characters = 0
 	visible_ratio = 0
+	
+	messages[message_id] = problem_data.problem
 	
 	if message_id >= messages.size():
 		active = false
 		emit_signal("dialogue_ended")
 		return
 	
-	parse_bbcode(messages[message_id])
+	parse_bbcode(tr(messages[message_id]))
 	tags = _parse_custom_tags( get_parsed_text() )
 	parse_bbcode(tags.pop_front())
 	active = true

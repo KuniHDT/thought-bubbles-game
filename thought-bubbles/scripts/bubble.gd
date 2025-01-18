@@ -1,9 +1,10 @@
 extends Control
 
 var message : String
-var stat1 : int
-var stat2 : int
-var stat3 : int
+var stat_self : int
+var stat_family : int
+var stat_work : int
+var stat_friends : int
 
 func _process(delta: float) -> void:
 	if message == null:
@@ -29,9 +30,10 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 	print("Button pressed.")
-	Globals.stat1 += stat1
-	Globals.stat2 += stat2
-	Globals.stat3 += stat3
+	Globals.stat_self += stat_self
+	Globals.stat_family += stat_family
+	Globals.stat_work += stat_work
+	Globals.stat_friends += stat_friends
 	get_parent().hide_bubbles(self.name)
 	await get_tree().create_timer(2).timeout
 	get_tree().current_scene.next_problem()

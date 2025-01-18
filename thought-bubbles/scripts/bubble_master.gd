@@ -6,14 +6,16 @@ extends Control
 func display_bubbles(problem_data:Resource):
 	var bubble_data = problem_data
 	bubble_1.message = bubble_data.bubble1_message
-	bubble_1.stat1 = bubble_data.bubble1_stat1
-	bubble_1.stat2 = bubble_data.bubble1_stat2
-	bubble_1.stat3 = bubble_data.bubble1_stat3
+	bubble_1.stat_self = bubble_data.bubble1_self
+	bubble_1.stat_family = bubble_data.bubble1_family
+	bubble_1.stat_work = bubble_data.bubble1_work
+	bubble_1.stat_friends = bubble_data.bubble1_friends
 	
 	bubble_2.message = bubble_data.bubble2_message
-	bubble_2.stat1 = bubble_data.bubble2_stat1
-	bubble_2.stat2 = bubble_data.bubble2_stat2
-	bubble_2.stat3 = bubble_data.bubble2_stat3
+	bubble_2.stat_self = bubble_data.bubble2_self
+	bubble_2.stat_family = bubble_data.bubble2_family
+	bubble_2.stat_work = bubble_data.bubble2_work
+	bubble_2.stat_friends = bubble_data.bubble2_friends
 
 func hide_bubbles(name : String):
 	if name == "Bubble":

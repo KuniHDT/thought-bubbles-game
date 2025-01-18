@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var main_scene : PackedScene = preload("res://scenes/main.tscn")
 
+func _init():
+	TranslationServer.set_locale("vi")
+
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_packed(main_scene)
 

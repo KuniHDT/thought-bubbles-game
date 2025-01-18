@@ -32,18 +32,20 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
 layout_mode = 2
-text = "GAME START"
+text = "START_BUTTON"
 
 [node name="CheckBox" type="CheckButton" parent="CanvasLayer/UI/VBoxContainer"]
+visible = false
 layout_mode = 2
 tooltip_text = "Choices have a time limit, but you get a score multiplier."
 text = "Time Attack"
 
 [node name="Button2" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
 layout_mode = 2
-text = "QUIT GAME"
+text = "QUIT_GAME_BUTTON"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

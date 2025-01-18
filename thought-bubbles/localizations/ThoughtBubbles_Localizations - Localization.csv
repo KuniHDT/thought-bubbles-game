@@ -1,0 +1,89 @@
+key,vi
+START_BUTTON,Bắt Đầu Chơi
+TIME_ATTACK_BUTTON,Chế Độ Nhanh
+TIME_ATTACK_TOOLTIP,"Có giới hạn thời gian khi lựa chọn bong bóng, nhưng bạn sẽ được cộng thêm điểm."
+QUIT_GAME_BUTTON,Thoát Game
+,
+CHARACTER_DAD,Ba
+CHARACTER_MOM,Mẹ
+CHARACTER_UNCLE,Chú
+CHARACTER_AUNT,Cô
+CHARACTER_DISTANT_RELATIVE,Anh em cây khế
+CHARACTER_SISTER,Em gái
+CHARACTER_LOVER,Người yêu
+CHARACTER_GRANDMA,Bà ngoại
+CHARACTER_BOSS,Sếp
+CHARACTER_INTERN,Thực tập
+CHARACTER_COLLEAGUE,Đồng nghiệp
+CHARACTER_CLIENT,Đối tác
+CHARACTER_CLOSE_FRIEND,Bạn thân
+CHARACTER_UNI_FRIEND,Bạn đại học
+CHARACTER_SPORT_FRIEND,Bạn thể thao
+CHARACTER_DRIVER,Bác lái xe buýt
+,
+VALUE_SELF,Bản thân
+VALUE_FAMILY,Gia đình
+VALUE_WORK,Công việc
+VALUE_FRIENDS,Bạn bè
+,
+ENDING_SELF,Bạn đã rơi vào trầm cảm!
+ENDING_WORK,Bạn đã bị đuổi việc!
+ENDING_FRIEND,Bạn đã bị bạn bè xa lánh!
+ENDING_FAMILY,Bạn đã bị gia đình từ mặt!
+ENDING_WIN,Chúc mừng! Bạn đã cân bằng được cuộc sống!
+,
+EVENT_MOM,Bà ngoại lại đổ bệnh rồi. Con vào chăm bà giúp mẹ
+THOUGHT_MOM_1,"Mẹ cần mình giúp bà, nhưng mình đang rất bận công việc."
+THOUGHT_MOM_2,"Mình phải qua ngay, bà đang cần mình."
+,
+EVENT_GRANDMA,Cháu cầm ít tiền mua đồ tết nha cháu. Đừng nói bố mẹ biết
+THOUGHT_GRANDMA_1,"Bà cho mình tiền, chắc không nên để bố mẹ biết."
+THOUGHT_GRANDMA_2,"Bà thật tuyệt vời, mình yêu bà nhất."
+,
+EVENT_DAD,"Máy của ba bị vấn đề rồi, con vể sửa cho ba với"
+THOUGHT_DAD_1,"Ba cần mình sửa máy, chắc phải ưu tiên ba lần này."
+THOUGHT_DAD_2,"Mình sẽ để lần khác, công việc hiện tại quá bận."
+,
+EVENT_SISTER,"Anh ơi, anh chỉ em làm bài tập đi, khó quá nè!"
+THOUGHT_SISTER_1,"Em gái cần mình giúp làm bài tập, tối mình rảnh sẽ làm."
+THOUGHT_SISTER_2,Mình nên để em tự hỏi cô giáo để tự lập hơn.
+,
+EVENT_LOVER,Mai anh đưa em đi chơi mua đồ nha? Sắp tết mà em chưa có gì mặc hết chơnnn.
+THOUGHT_LOVER_1,"Người yêu muốn đi chơi, mình nên dành thời gian với cô ấy."
+THOUGHT_LOVER_2,"Mình đang bận việc khác, có thể dời sang hôm khác."
+,
+EVENT_UNCLE,Ủa nay về quê không? Mua giúp chú ít đồ nha!
+THOUGHT_UNCLE_1,"Chú muốn nhờ mình mua đồ, nhưng mình đang không có thời gian."
+THOUGHT_UNCLE_2,Có lẽ mình sẽ cố gắng mua đồ giúp chú.
+,
+EVENT_AUNT,"Cháu ơi, cháu xin cho em vào công ty với. Em nhà cô thông minh lắm"
+THOUGHT_AUNT_1,"Cô nhờ giúp xin việc cho người thân, mình sẽ thử hỏi."
+THOUGHT_AUNT_2,"Thời điểm hiện tại khó khăn, mình không thể giúp được."
+,
+EVENT_CLOSE_FRIEND,Ều mai đi câu cá không? Tôi mới mua cần mới này. Carbon fiber đó!!!
+THOUGHT_CLOSE_FRIEND_1,"Bạn thân rủ đi câu cá, nhưng mình có việc bận rồi."
+THOUGHT_CLOSE_FRIEND_2,Đi câu cá cùng bạn thân có thể giúp giảm stress.
+,
+EVENT_UNI_FRIEND,"Hello, dạo này bồ có khoẻ hông zạ? Cuối tuần mình tổ chức đám cưới, mời bạn sang chung vui nha."
+THOUGHT_UNI_FRIEND_1,"Mình có lịch vào cuối tuần, không thể dự đám cưới."
+THOUGHT_UNI_FRIEND_2,"Dự đám cưới là cơ hội gặp lại bạn cũ, mình nên đi."
+,
+EVENT_SPORT_FRIEND,Chiều nay sân Đại học Viễn Thông 5 giờ.
+THOUGHT_SPORT_FRIEND_1,"Mình có việc bận gia đình, nên không thể đi."
+THOUGHT_SPORT_FRIEND_2,"Mình sẽ đi, chắc sẽ rất vui!"
+,
+EVENT_BOSS,"Nay có dự án mới về, anh muốn em chỉ đạo dự án này. Em thấy sao?"
+THOUGHT_BOSS_1,Nhận dự án này sẽ giúp mình phát triển trong công việc.
+THOUGHT_BOSS_2,Mình nên tập trung vào gia đình lúc này.
+,
+EVENT_CLIENT,Thiết kế website hiện tại chị thấy chưa được hiện đại và chưa thể hiện được giá trị của công ty. Em sửa lại giúp chị.
+THOUGHT_CLIENT_1,Mình cần cải thiện thiết kế website để đáp ứng yêu cầu khách hàng.
+THOUGHT_CLIENT_2,Sử dụng thiết kế hiện tại sẽ giúp đảm bảo tiến độ.
+,
+EVENT_COLLEAGUE,Ê tôi giờ có dự án sử dụng công nghệ ông làm ở dự án trước. Ông làm buổi chia sẻ kinh nghiệm cho tụi tôi được không?
+THOUGHT_COLLEAGUE_1,Chia sẻ kinh nghiệm sẽ giúp đồng nghiệp và mình học hỏi thêm.
+THOUGHT_COLLEAGUE_2,Mình nên gửi tài liệu thay vì làm buổi chia sẻ.
+,
+EVENT_DRIVER,"Cuộc sống cũng như là lái xe vậy. Không phải lái một đường thẳng mà phải có lúc nghiêng trái, nghiêng phải một tí, điều chỉnh tùy theo hoàn cảnh."
+THOUGHT_DRIVER_1,Cuộc nói chuyện này giúp mình hiểu hơn về cuộc sống.
+THOUGHT_DRIVER_2,"Mình thấy bác lại nói đạo lý, nhưng cũng có lý."

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ucfsqiykdu2g"]
+
+[ext_resource type="Script" path="res://scripts/bubble.gd" id="1_fgguf"]
+
+[node name="Bubble" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fgguf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

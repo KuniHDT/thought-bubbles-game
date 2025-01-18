@@ -1,13 +1,15 @@
-class_name Bubble
 extends Control
 
-var key : String
+var message : String
 var stat1 : int
 var stat2 : int
 var stat3 : int
 
 func _process(delta: float) -> void:
-	$Button.text = key
+	if message == null:
+		return
+	else:
+		$RichTextLabel.text = message
 
 func _on_button_mouse_entered() -> void:
 	pass

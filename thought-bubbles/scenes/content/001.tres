@@ -5,15 +5,11 @@
 [resource]
 script = ExtResource("1_lhjgs")
 problem = ""
-bubble1_key = "THOUGHT_MAMA"
+bubble1_message = "BRUH"
 bubble1_stat1 = 1
 bubble1_stat2 = -1
 bubble1_stat3 = 1
-bubble2_key = ""
+bubble2_message = "XD"
 bubble2_stat1 = 0
 bubble2_stat2 = 0
 bubble2_stat3 = 0
-bubble3_key = ""
-bubble3_stat1 = 0
-bubble3_stat2 = 0
-bubble3_stat3 = 0

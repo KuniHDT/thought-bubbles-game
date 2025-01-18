@@ -8,6 +8,4 @@ var stat2 : int
 var stat3 : int
 
 func _ready():
-	stat1 = 5
-	stat2 = 5
-	stat3 = 5
+	pass

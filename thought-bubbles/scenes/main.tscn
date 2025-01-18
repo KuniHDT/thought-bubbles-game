@@ -460,6 +460,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("2_5i3bu")
 
 [node name="Bubble" parent="CanvasLayer/Bubbles" instance=ExtResource("3_osycq")]

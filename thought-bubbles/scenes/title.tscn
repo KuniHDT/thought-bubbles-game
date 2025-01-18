@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5iwxgdpycxce"]
+[gd_scene load_steps=4 format=3 uid="uid://b5iwxgdpycxce"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_1x5ng"]
+[ext_resource type="Texture2D" uid="uid://bssy2m7mcdfq0" path="res://graphics/ui/—Pngtree—notebook page vector_13797439.png" id="2_sjjsi"]
+[ext_resource type="Theme" uid="uid://bn6e323w1a45y" path="res://graphics/ui/menu_theme.tres" id="3_apsjt"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_1x5ng")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(355, 558)
+scale = Vector2(1.0225, 1.43917)
+texture = ExtResource("2_sjjsi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -16,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -48.0
-offset_right = -40.0
-offset_bottom = -8.0
+offset_left = -240.0
+offset_top = -200.0
+offset_right = -200.0
+offset_bottom = -160.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -31,7 +36,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
+theme = ExtResource("3_apsjt")
+theme_override_font_sizes/font_size = 50
 text = "START_BUTTON"
 
 [node name="CheckBox" type="CheckButton" parent="CanvasLayer/UI/VBoxContainer"]
@@ -41,7 +49,10 @@ tooltip_text = "Choices have a time limit, but you get a score multiplier."
 text = "Time Attack"
 
 [node name="Button2" type="Button" parent="CanvasLayer/UI/VBoxContainer"]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
+theme = ExtResource("3_apsjt")
+theme_override_font_sizes/font_size = 50
 text = "QUIT_GAME_BUTTON"
 
 [node name="Label" type="Label" parent="CanvasLayer"]

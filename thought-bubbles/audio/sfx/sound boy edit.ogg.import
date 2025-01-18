@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bolfidmu3ikqx"
+path="res://.godot/imported/sound boy edit.ogg-27bcb4d75bc4b2a67a4062c7e4010b8f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/sfx/sound boy edit.ogg"
+dest_files=["res://.godot/imported/sound boy edit.ogg-27bcb4d75bc4b2a67a4062c7e4010b8f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

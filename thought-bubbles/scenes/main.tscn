@@ -1,9 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://chee1y43tthra"]
+[gd_scene load_steps=50 format=3 uid="uid://chee1y43tthra"]
 
 [ext_resource type="Script" path="res://scripts/status_bar.gd" id="1_0ybnd"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_inyyn"]
 [ext_resource type="Script" path="res://addons/dialogue_label/src/DialogueLabel.gd" id="1_rbjpy"]
 [ext_resource type="Texture2D" uid="uid://fgx5u54o36ya" path="res://graphics/sprites/Duck/Sprites/Idle/Idle 001.png" id="1_teaw6"]
+[ext_resource type="Texture2D" uid="uid://bssy2m7mcdfq0" path="res://graphics/ui/—Pngtree—notebook page vector_13797439.png" id="2_1f2n5"]
 [ext_resource type="Script" path="res://scripts/bubble_master.gd" id="2_5i3bu"]
 [ext_resource type="Texture2D" uid="uid://dw5v5avbj8o2r" path="res://graphics/sprites/Duck/Sprites/Idle/Idle 002.png" id="2_pdbms"]
 [ext_resource type="Texture2D" uid="uid://mw3qalc57g87" path="res://graphics/sprites/Hat_man/Walk/Hat_man1.png" id="3_3ycuw"]
@@ -17,7 +18,17 @@
 [ext_resource type="AudioStream" uid="uid://c8y2m8d7bi57p" path="res://audio/bgm/main theme.wav" id="13_5qhl5"]
 [ext_resource type="Script" path="res://addons/resonate/sound_manager/sound_bank.gd" id="13_ywu6g"]
 [ext_resource type="Script" path="res://addons/resonate/sound_manager/sound_event_resource.gd" id="14_0dflf"]
+[ext_resource type="Texture2D" uid="uid://bltda3xw3nrw7" path="res://graphics/ui/self_under.png" id="14_0ery8"]
+[ext_resource type="Texture2D" uid="uid://bjbgujw0i344c" path="res://graphics/ui/self_progress.png" id="15_taiig"]
+[ext_resource type="Texture2D" uid="uid://dl3mdc8ffcsos" path="res://graphics/ui/work_under.png" id="16_vu68i"]
+[ext_resource type="Texture2D" uid="uid://b3da5dbj5xdqd" path="res://graphics/ui/family_under.png" id="16_x74ud"]
+[ext_resource type="Texture2D" uid="uid://c3mcbgd6xxguu" path="res://graphics/ui/work_progress.png" id="17_1wm27"]
+[ext_resource type="Texture2D" uid="uid://byukhso233stn" path="res://graphics/ui/family_progress.png" id="17_lc4c6"]
 [ext_resource type="PackedScene" uid="uid://bgtgg0ahui6wj" path="res://scenes/game_over_screen.tscn" id="17_ux1gs"]
+[ext_resource type="Texture2D" uid="uid://q5uykwunncr7" path="res://graphics/ui/friends_under.png" id="20_khubv"]
+[ext_resource type="Texture2D" uid="uid://dnu3airtb2ys6" path="res://graphics/ui/friends_progress.png" id="21_rmvod"]
+[ext_resource type="AudioStream" uid="uid://dbgadkohlq0pa" path="res://audio/sfx/pencil.wav" id="27_rlbnh"]
+[ext_resource type="AudioStream" uid="uid://dv54n05k3n0u2" path="res://audio/sfx/typing.ogg" id="28_ngdf4"]
 
 [sub_resource type="Resource" id="Resource_arrxx"]
 script = ExtResource("12_vyap0")
@@ -53,6 +64,14 @@ volume = 0.0
 pitch = 1.0
 streams = Array[AudioStream]([ExtResource("8_d1xpl")])
 
+[sub_resource type="Resource" id="Resource_n810w"]
+script = ExtResource("14_0dflf")
+name = "pencil"
+bus = ""
+volume = -30.0
+pitch = 1.0
+streams = Array[AudioStream]([ExtResource("27_rlbnh")])
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_wigng"]
 animations = [{
 "frames": [{
@@ -78,6 +97,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlhjp"]
+bg_color = Color(0.0859838, 0.0859838, 0.0859838, 0.752941)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.101241, 0.101241, 0.101241, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4luy3"]
 texture = ExtResource("10_k2xew")
 region_rect = Rect2(-0.46, 0, 0, 0)
@@ -85,7 +112,27 @@ region_rect = Rect2(-0.46, 0, 0, 0)
 [sub_resource type="Theme" id="Theme_sld7t"]
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_4luy3")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6id1"]
+bg_color = Color(0.958317, 0.767788, 0.598574, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0i1bl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8bup"]
+bg_color = Color(0.944281, 0.944281, 0.944281, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0936694, 0.0936694, 0.0936693, 1)
+
 [sub_resource type="Theme" id="Theme_n8xgr"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_u8bup")
 
 [sub_resource type="Animation" id="Animation_hg7ib"]
 length = 0.001
@@ -176,82 +223,34 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CanvasLayer/Bubbles/Bubble:position")
+tracks/7/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4/Bar:value")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-43, -135)]
+"values": [5.0]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("CanvasLayer/Bubbles/Bubble:modulate")
+tracks/8/path = NodePath("CanvasLayer/GameOverScreen:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, -1483)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CanvasLayer/Bubbles/Bubble2:position")
+tracks/9/path = NodePath("CanvasLayer/VBoxContainer:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-249, -71)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("CanvasLayer/Bubbles/Bubble2:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4/Bar:value")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [5.0]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("CanvasLayer/GameOverScreen:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -1483)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("CanvasLayer/VBoxContainer:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -270,7 +269,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-43, -100), Vector2(-43, -135)]
+"values": [Vector2(78, -70), Vector2(78, -124)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -294,7 +293,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-249, -21), Vector2(-249, -71)]
+"values": [Vector2(-284, 10), Vector2(-284, -46)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -462,6 +461,11 @@ _data = {
 [node name="Main" type="Node2D"]
 script = ExtResource("1_inyyn")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(355, 522)
+scale = Vector2(1.0225, 1.43917)
+texture = ExtResource("2_1f2n5")
+
 [node name="MusicBank" type="Node" parent="."]
 script = ExtResource("10_sn6xl")
 label = "bgm"
@@ -472,7 +476,7 @@ tracks = Array[ExtResource("11_et5lh")]([SubResource("Resource_h2jdq"), SubResou
 script = ExtResource("13_ywu6g")
 label = "sfx"
 bus = "SFX"
-events = Array[ExtResource("14_0dflf")]([SubResource("Resource_2lnwa")])
+events = Array[ExtResource("14_0dflf")]([SubResource("Resource_2lnwa"), SubResource("Resource_n810w")])
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
@@ -505,6 +509,7 @@ script = ExtResource("1_0ybnd")
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/StatusBar"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qlhjp")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/StatusBar/PanelContainer"]
 layout_mode = 2
@@ -518,85 +523,90 @@ size_flags_vertical = 4
 [node name="Status" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+alignment = 1
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
+[node name="Bar" type="TextureProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+max_value = 6.0
+value = 5.0
+fill_mode = 3
+texture_under = ExtResource("14_0ery8")
+texture_progress = ExtResource("15_taiig")
 
 [node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "VALUE_SELF"
 horizontal_alignment = 1
 uppercase = true
-
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-max_value = 6.0
-value = 5.0
-show_percentage = false
 
 [node name="Status2" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
+[node name="Bar" type="TextureProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+max_value = 6.0
+value = 5.0
+fill_mode = 3
+texture_under = ExtResource("16_x74ud")
+texture_progress = ExtResource("17_lc4c6")
 
 [node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "VALUE_FAMILY"
 horizontal_alignment = 1
 uppercase = true
-
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-max_value = 6.0
-value = 5.0
-show_percentage = false
 
 [node name="Status3" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
+[node name="Bar" type="TextureProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+max_value = 6.0
+value = 5.0
+fill_mode = 3
+texture_under = ExtResource("16_vu68i")
+texture_progress = ExtResource("17_1wm27")
 
 [node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "VALUE_WORK"
 horizontal_alignment = 1
 uppercase = true
-
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-max_value = 6.0
-value = 5.0
-show_percentage = false
 
 [node name="Status4" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
+[node name="Bar" type="TextureProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+max_value = 6.0
+value = 5.0
+fill_mode = 3
+texture_under = ExtResource("20_khubv")
+texture_progress = ExtResource("21_rmvod")
 
 [node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "VALUE_FRIENDS"
 horizontal_alignment = 1
 uppercase = true
-
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-max_value = 6.0
-value = 5.0
-show_percentage = false
 
 [node name="Bubbles" type="Control" parent="CanvasLayer"]
 visible = false
@@ -606,31 +616,45 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -40.0
-offset_right = -1.0
-offset_bottom = -40.0
+offset_left = -120.0
+offset_top = -212.0
+offset_right = -120.0
+offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 script = ExtResource("2_5i3bu")
 
 [node name="Bubble" parent="CanvasLayer/Bubbles" instance=ExtResource("3_osycq")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -43.0
 offset_top = -135.0
 offset_right = 273.0
 offset_bottom = 77.0
+grow_horizontal = 1
+grow_vertical = 1
 theme = SubResource("Theme_sld7t")
 
 [node name="Bubble2" parent="CanvasLayer/Bubbles" instance=ExtResource("3_osycq")]
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -249.0
 offset_top = -71.0
 offset_right = 67.0
 offset_bottom = 141.0
+grow_horizontal = 1
+grow_vertical = 1
 theme = SubResource("Theme_sld7t")
-flip_h = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -647,21 +671,32 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
-[node name="CharacterName" type="PanelContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="CharacterName" type="PanelContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_y6id1")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/CharacterName"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer/CharacterName"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/CharacterName/MarginContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/CharacterName/MarginContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxEmpty_0i1bl")
 
 [node name="DialogueBox" type="PanelContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -678,12 +713,13 @@ theme_override_constants/margin_bottom = 15
 [node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer/DialogueBox/MarginContainer"]
 clip_contents = false
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 fit_content = true
 scroll_active = false
 script = ExtResource("1_rbjpy")
-messages = Array[String](["CONTENT", "CONTENT", "CONTENT 3", "CONTENT 4", "CONTENT 5", "CONTENT 6", "CONTENT 7", "CONTENT 8", "CONTENT 9", "CONTENT 10", "CONTENT 11", "CONTENT 12", "CONTENT 13", "CONTENT 14", "CONTENT 15", "CONTENT 16", "CONTENT 17", "CONTENT 18", "CONTENT 19", "CONTENT 20"])
-sound_files = Array[AudioStream]([null])
+messages = Array[String](["CONTENT", "CONTENT", "CONTENT 3", "CONTENT 4", "CONTENT 5", "CONTENT 6", "CONTENT 7", "CONTENT 8", "CONTENT 9", "CONTENT 10", "CONTENT 11", "CONTENT 12", "CONTENT 13", "CONTENT 14", "CONTENT 15"])
+sound_files = Array[AudioStream]([ExtResource("28_ngdf4")])
 text_speed = 0.3
 
 [node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("17_ux1gs")]
@@ -699,6 +735,7 @@ libraries = {
 position = Vector2(359, 452)
 scale = Vector2(1.5, 1.5)
 
+[connection signal="message_finished" from="CanvasLayer/VBoxContainer/DialogueBox/MarginContainer/DialogueLabel" to="." method="_on_dialogue_label_message_finished"]
 [connection signal="message_finished" from="CanvasLayer/VBoxContainer/DialogueBox/MarginContainer/DialogueLabel" to="CanvasLayer/Bubbles" method="_on_dialogue_label_message_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 

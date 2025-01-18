@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var dialogue = $CanvasLayer/VBoxContainer/DialogueBox/MarginContainer/DialogueLabel
-@onready var character_name = $CanvasLayer/VBoxContainer/CharacterName/MarginContainer/Label
+@onready var character_name = $CanvasLayer/VBoxContainer/HBoxContainer/CharacterName/MarginContainer/Label
 @onready var bubbles = $CanvasLayer/Bubbles
 
 @export var problem_data : Resource
@@ -43,6 +43,8 @@ func start_problem():
 	character_name.text = problem_data.person
 
 func next_problem():
+	if Globals.game_over == true:
+		return
 	problem_data = problems[dialogue.message_id + 1]
 	dialogue.next_message(problem_data)
 	$AnimationPlayer.play("display_bubbles")
@@ -75,3 +77,6 @@ func game_over(type : String):
 	$AnimationPlayer.play("game_over")
 	MusicManager.play("bgm", "game_over", 0.25)
 	Globals.game_over = true
+
+func _on_dialogue_label_message_finished() -> void:
+	pass

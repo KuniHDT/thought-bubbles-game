@@ -55,7 +55,7 @@ func next_message(problem_data:Resource):
 	visible_characters = 0
 	visible_ratio = 0
 	
-	messages[message_id] = problem_data.problem
+	messages[message_id] = "[snd 0]" + " " + str(tr(problem_data.problem))
 	
 	if message_id >= messages.size():
 		active = false

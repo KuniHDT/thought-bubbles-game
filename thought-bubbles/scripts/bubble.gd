@@ -1,10 +1,13 @@
 class_name Bubble
 extends Control
 
-var problem
-var stat1
-var stat2
-var stat3
+var key : String
+var stat1 : int
+var stat2 : int
+var stat3 : int
+
+func _process(delta: float) -> void:
+	$Button.text = key
 
 func _on_button_mouse_entered() -> void:
 	pass

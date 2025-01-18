@@ -1,13 +1,19 @@
 [gd_resource type="Resource" script_class="BubbleContent" load_steps=2 format=3 uid="uid://ql8y1gmxdwdu"]
 
-[ext_resource type="Script" path="res://bubbles_content.gd" id="1_lhjgs"]
+[ext_resource type="Script" path="res://scripts/bubbles_content.gd" id="1_lhjgs"]
 
 [resource]
 script = ExtResource("1_lhjgs")
-problem = "PROBLEM_"
-bubble1 = "THOUGHT_"
-bubble2 = "THOUGHT_"
-bubble3 = "THOUGHT_"
-stat1 = 0
-stat2 = 0
-stat3 = 0
+problem = ""
+bubble1_key = "THOUGHT_MAMA"
+bubble1_stat1 = 1
+bubble1_stat2 = -1
+bubble1_stat3 = 1
+bubble2_key = ""
+bubble2_stat1 = 0
+bubble2_stat2 = 0
+bubble2_stat3 = 0
+bubble3_key = ""
+bubble3_stat1 = 0
+bubble3_stat2 = 0
+bubble3_stat3 = 0

@@ -1,30 +1,76 @@
-[gd_scene load_steps=9 format=3 uid="uid://chee1y43tthra"]
+[gd_scene load_steps=18 format=3 uid="uid://chee1y43tthra"]
 
+[ext_resource type="Script" path="res://scripts/status_bar.gd" id="1_0ybnd"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_inyyn"]
 [ext_resource type="Script" path="res://addons/dialogue_label/src/DialogueLabel.gd" id="1_rbjpy"]
+[ext_resource type="Texture2D" uid="uid://fgx5u54o36ya" path="res://graphics/sprites/Duck/Sprites/Idle/Idle 001.png" id="1_teaw6"]
 [ext_resource type="Script" path="res://scripts/bubble_master.gd" id="2_5i3bu"]
+[ext_resource type="Texture2D" uid="uid://dw5v5avbj8o2r" path="res://graphics/sprites/Duck/Sprites/Idle/Idle 002.png" id="2_pdbms"]
+[ext_resource type="Texture2D" uid="uid://mw3qalc57g87" path="res://graphics/sprites/Hat_man/Walk/Hat_man1.png" id="3_3ycuw"]
 [ext_resource type="PackedScene" uid="uid://ucfsqiykdu2g" path="res://scenes/bubble.tscn" id="3_osycq"]
+[ext_resource type="Resource" uid="uid://ql8y1gmxdwdu" path="res://scenes/content/001.tres" id="4_njg3u"]
+[ext_resource type="Texture2D" uid="uid://14g325einmk1" path="res://graphics/ui/—Pngtree—hand drawn comic speech bubbles_8367642.png" id="10_k2xew"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wigng"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_teaw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pdbms")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6ywf"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_tfxw8"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4ovw"]
-texture = SubResource("AnimatedTexture_tfxw8")
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3ycuw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_n8xgr"]
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_u4ovw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4luy3"]
+texture = ExtResource("10_k2xew")
+region_rect = Rect2(-0.46, 0, 0, 0)
+
+[sub_resource type="Theme" id="Theme_sld7t"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_4luy3")
+
+[sub_resource type="Animation" id="Animation_shel7"]
+resource_name = "initial_start"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cac6i"]
+_data = {
+"initial_start": SubResource("Animation_shel7")
+}
 
 [node name="Main" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_inyyn")
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(189, 457)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wigng")
+autoplay = "default"
+frame_progress = 0.408329
 
 [node name="People" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(501, 481)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_f6ywf")
+autoplay = "default"
+flip_h = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -36,6 +82,7 @@ grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
+script = ExtResource("1_0ybnd")
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/StatusBar"]
 layout_mode = 2
@@ -45,72 +92,110 @@ size_flags_vertical = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status"]
 layout_mode = 2
 text = "Self-esteem"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="TextureProgressBar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status"]
 layout_mode = 2
-show_percentage = false
+max_value = 10.0
+value = 5.0
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status2" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer2"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2"]
 layout_mode = 2
 text = "Stress"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="TextureProgressBar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer2"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2"]
 layout_mode = 2
-show_percentage = false
+max_value = 10.0
+value = 5.0
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status3" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer3"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3"]
 layout_mode = 2
 text = "Relations"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="TextureProgressBar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/VBoxContainer3"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3"]
 layout_mode = 2
-show_percentage = false
+max_value = 10.0
+value = 5.0
 
 [node name="DialogueBox" type="PanelContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = 198.0
+offset_right = 234.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_n8xgr")
 
 [node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/DialogueBox"]
+clip_contents = false
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+text = "<null>"
+fit_content = true
+scroll_active = false
 script = ExtResource("1_rbjpy")
-sound_files = Array[AudioStream]([null])
+messages = Array[String](["CONTENT 1", "CONTENT 2", "CONTENT 3", "CONTENT 4", "CONTENT 5", "CONTENT 6", "CONTENT 7", "CONTENT 8", "CONTENT 9", "CONTENT 10", "CONTENT 11", "CONTENT 12", "CONTENT 13", "CONTENT 14", "CONTENT 15", "CONTENT 16", "CONTENT 17", "CONTENT 18", "CONTENT 19", "CONTENT 20"])
+text_speed = 0.3
 
 [node name="Bubbles" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_5i3bu")
+event_data = ExtResource("4_njg3u")
 
 [node name="Bubble" parent="CanvasLayer/Bubbles" instance=ExtResource("3_osycq")]
 layout_mode = 0
+offset_left = -43.0
+offset_top = -135.0
+offset_right = 273.0
+offset_bottom = 77.0
+theme = SubResource("Theme_sld7t")
+
+[node name="Bubble2" parent="CanvasLayer/Bubbles" instance=ExtResource("3_osycq")]
+layout_mode = 0
+offset_left = -249.0
+offset_top = -71.0
+offset_right = 67.0
+offset_bottom = 141.0
+theme = SubResource("Theme_sld7t")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cac6i")
+}
 
 [connection signal="message_finished" from="CanvasLayer/DialogueBox/DialogueLabel" to="CanvasLayer/Bubbles" method="_on_dialogue_label_message_finished"]

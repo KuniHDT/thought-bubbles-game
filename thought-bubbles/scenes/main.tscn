@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://chee1y43tthra"]
+[gd_scene load_steps=34 format=3 uid="uid://chee1y43tthra"]
 
 [ext_resource type="Script" path="res://scripts/status_bar.gd" id="1_0ybnd"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_inyyn"]
@@ -8,7 +8,50 @@
 [ext_resource type="Texture2D" uid="uid://dw5v5avbj8o2r" path="res://graphics/sprites/Duck/Sprites/Idle/Idle 002.png" id="2_pdbms"]
 [ext_resource type="Texture2D" uid="uid://mw3qalc57g87" path="res://graphics/sprites/Hat_man/Walk/Hat_man1.png" id="3_3ycuw"]
 [ext_resource type="PackedScene" uid="uid://ucfsqiykdu2g" path="res://scenes/bubble.tscn" id="3_osycq"]
+[ext_resource type="AudioStream" uid="uid://bixsajp3lysol" path="res://audio/bgm/sad end.wav" id="6_b33rm"]
+[ext_resource type="AudioStream" uid="uid://cf8xqo613gfpk" path="res://audio/sfx/buble pop.wav" id="8_d1xpl"]
 [ext_resource type="Texture2D" uid="uid://14g325einmk1" path="res://graphics/ui/—Pngtree—hand drawn comic speech bubbles_8367642.png" id="10_k2xew"]
+[ext_resource type="Script" path="res://addons/resonate/music_manager/music_bank.gd" id="10_sn6xl"]
+[ext_resource type="Script" path="res://addons/resonate/music_manager/music_track_resource.gd" id="11_et5lh"]
+[ext_resource type="Script" path="res://addons/resonate/music_manager/music_stem_resource.gd" id="12_vyap0"]
+[ext_resource type="AudioStream" uid="uid://c8y2m8d7bi57p" path="res://audio/bgm/main theme.wav" id="13_5qhl5"]
+[ext_resource type="Script" path="res://addons/resonate/sound_manager/sound_bank.gd" id="13_ywu6g"]
+[ext_resource type="Script" path="res://addons/resonate/sound_manager/sound_event_resource.gd" id="14_0dflf"]
+[ext_resource type="PackedScene" uid="uid://bgtgg0ahui6wj" path="res://scenes/game_over_screen.tscn" id="17_ux1gs"]
+
+[sub_resource type="Resource" id="Resource_arrxx"]
+script = ExtResource("12_vyap0")
+name = "theme_bgm"
+enabled = true
+volume = 4.6
+stream = ExtResource("13_5qhl5")
+
+[sub_resource type="Resource" id="Resource_h2jdq"]
+script = ExtResource("11_et5lh")
+name = "theme"
+bus = ""
+stems = Array[ExtResource("12_vyap0")]([SubResource("Resource_arrxx")])
+
+[sub_resource type="Resource" id="Resource_3nae2"]
+script = ExtResource("12_vyap0")
+name = "game_over"
+enabled = true
+volume = 0.0
+stream = ExtResource("6_b33rm")
+
+[sub_resource type="Resource" id="Resource_wj6t2"]
+script = ExtResource("11_et5lh")
+name = "game_over"
+bus = ""
+stems = Array[ExtResource("12_vyap0")]([SubResource("Resource_3nae2")])
+
+[sub_resource type="Resource" id="Resource_2lnwa"]
+script = ExtResource("14_0dflf")
+name = "pop"
+bus = ""
+volume = 0.0
+pitch = 1.0
+streams = Array[AudioStream]([ExtResource("8_d1xpl")])
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wigng"]
 animations = [{
@@ -73,7 +116,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status/Bar:value")
+tracks/2/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status/Bar:value")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -85,7 +128,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2/Bar:value")
+tracks/3/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2/Bar:value")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -97,7 +140,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3/Bar:value")
+tracks/4/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3/Bar:value")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -181,7 +224,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status4/Bar:value")
+tracks/11/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4/Bar:value")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -189,6 +232,30 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [5.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/GameOverScreen:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1483)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/VBoxContainer:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ccr47"]
@@ -272,38 +339,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status/Bar:value")
+tracks/2/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status/Bar:value")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(2, 3.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 5.0]
+"values": [0.0, 3.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2/Bar:value")
+tracks/3/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2/Bar:value")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(2, 3.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 5.0]
+"values": [0.0, 3.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3/Bar:value")
+tracks/4/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3/Bar:value")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(2, 3.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 5.0]
+"values": [0.0, 3.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -346,25 +413,66 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status4/Bar:value")
+tracks/8/path = NodePath("CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4/Bar:value")
 tracks/8/interp = 2
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(2, 3.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 5.0]
+"values": [0.0, 3.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/VBoxContainer:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_us412"]
+resource_name = "game_over"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/GameOverScreen:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1483), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cac6i"]
 _data = {
 "RESET": SubResource("Animation_hg7ib"),
 "display_bubbles": SubResource("Animation_ccr47"),
+"game_over": SubResource("Animation_us412"),
 "initial_start": SubResource("Animation_shel7")
 }
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_inyyn")
+
+[node name="MusicBank" type="Node" parent="."]
+script = ExtResource("10_sn6xl")
+label = "bgm"
+bus = "BGM"
+tracks = Array[ExtResource("11_et5lh")]([SubResource("Resource_h2jdq"), SubResource("Resource_wj6t2")])
+
+[node name="SoundBank" type="Node" parent="."]
+script = ExtResource("13_ywu6g")
+label = "sfx"
+bus = "SFX"
+events = Array[ExtResource("14_0dflf")]([SubResource("Resource_2lnwa")])
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
@@ -398,90 +506,95 @@ script = ExtResource("1_0ybnd")
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/StatusBar/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Status" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
 layout_mode = 2
 
-[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
 layout_mode = 2
 text = "VALUE_SELF"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
-max_value = 10.0
+max_value = 6.0
 value = 5.0
 show_percentage = false
 
-[node name="Status2" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status2" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
 layout_mode = 2
 
-[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
 layout_mode = 2
 text = "VALUE_FAMILY"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status2"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status2"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
-max_value = 10.0
+max_value = 6.0
 value = 5.0
 show_percentage = false
 
-[node name="Status3" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status3" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
 layout_mode = 2
 
-[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
 layout_mode = 2
 text = "VALUE_WORK"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status3"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status3"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
-max_value = 10.0
+max_value = 6.0
 value = 5.0
 show_percentage = false
 
-[node name="Status4" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer"]
+[node name="Status4" type="VBoxContainer" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status4"]
+[node name="Icon" type="TextureRect" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
 layout_mode = 2
 
-[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status4"]
+[node name="Text" type="Label" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
 layout_mode = 2
 text = "VALUE_FRIENDS"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/HBoxContainer/Status4"]
+[node name="Bar" type="ProgressBar" parent="CanvasLayer/StatusBar/PanelContainer/MarginContainer/HBoxContainer/Status4"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
-max_value = 10.0
+max_value = 6.0
 value = 5.0
 show_percentage = false
 
@@ -549,7 +662,6 @@ theme_override_constants/margin_bottom = 10
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/CharacterName/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "CHARACTER_DAD"
 
 [node name="DialogueBox" type="PanelContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -567,12 +679,16 @@ theme_override_constants/margin_bottom = 15
 clip_contents = false
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30
-text = "<null>"
 fit_content = true
 scroll_active = false
 script = ExtResource("1_rbjpy")
 messages = Array[String](["CONTENT", "CONTENT", "CONTENT 3", "CONTENT 4", "CONTENT 5", "CONTENT 6", "CONTENT 7", "CONTENT 8", "CONTENT 9", "CONTENT 10", "CONTENT 11", "CONTENT 12", "CONTENT 13", "CONTENT 14", "CONTENT 15", "CONTENT 16", "CONTENT 17", "CONTENT 18", "CONTENT 19", "CONTENT 20"])
+sound_files = Array[AudioStream]([null])
 text_speed = 0.3
+
+[node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("17_ux1gs")]
+offset_top = -1483.0
+offset_bottom = -1483.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -585,3 +701,5 @@ scale = Vector2(1.5, 1.5)
 
 [connection signal="message_finished" from="CanvasLayer/VBoxContainer/DialogueBox/MarginContainer/DialogueLabel" to="CanvasLayer/Bubbles" method="_on_dialogue_label_message_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="CanvasLayer/GameOverScreen"]

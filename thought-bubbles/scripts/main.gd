@@ -48,12 +48,30 @@ func next_problem():
 	$AnimationPlayer.play("display_bubbles")
 	bubbles.display_bubbles(problem_data)
 	character_name.text = problem_data.person
+	$CanvasLayer/Bubbles/Bubble.disabled = false
+	$CanvasLayer/Bubbles/Bubble2.disabled = false
 	
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "initial_start":
 		Globals.game_started = true
-		Globals.stat_self = 5
-		Globals.stat_family = 5
-		Globals.stat_work = 5
-		Globals.stat_friends = 5
+		Globals.stat_self = 3
+		Globals.stat_family = 3
+		Globals.stat_work = 3
+		Globals.stat_friends = 3
+		MusicManager.play("bgm", "theme")
 		start_problem()
+
+func game_over(type : String):
+	var game_over_text = $CanvasLayer/GameOverScreen/VBoxContainer/Label
+	match type:
+		"self":
+			game_over_text.text = "ENDING_SELF"
+		"family":
+			game_over_text.text = "ENDING_FAMILY"
+		"work":
+			game_over_text.text = "ENDING_WORK"
+		"friends":
+			game_over_text.text = "ENDING_FRIEND"
+	$AnimationPlayer.play("game_over")
+	MusicManager.play("bgm", "game_over", 0.25)
+	Globals.game_over = true

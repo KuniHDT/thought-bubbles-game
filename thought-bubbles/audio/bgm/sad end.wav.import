@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bixsajp3lysol"
+path="res://.godot/imported/sad end.wav-2806b82802e1e70ab21423dc21e5186c.sample"
+
+[deps]
+
+source_file="res://audio/bgm/sad end.wav"
+dest_files=["res://.godot/imported/sad end.wav-2806b82802e1e70ab21423dc21e5186c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

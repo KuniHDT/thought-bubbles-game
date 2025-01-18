@@ -1,13 +1,13 @@
 extends Control
 
 @onready var status_1 = $PanelContainer/HBoxContainer/Status
-@onready var status_1_bar = $PanelContainer/HBoxContainer/Status/Bar
+@onready var status_1_bar = $PanelContainer/MarginContainer/HBoxContainer/Status/Bar
 @onready var status_2 = $PanelContainer/HBoxContainer/Status2
-@onready var status_2_bar = $PanelContainer/HBoxContainer/Status2/Bar
+@onready var status_2_bar = $PanelContainer/MarginContainer/HBoxContainer/Status2/Bar
 @onready var status_3 = $PanelContainer/HBoxContainer/Status3
-@onready var status_3_bar = $PanelContainer/HBoxContainer/Status3/Bar
+@onready var status_3_bar = $PanelContainer/MarginContainer/HBoxContainer/Status3/Bar
 @onready var status_4 = $PanelContainer/HBoxContainer/Status4
-@onready var status_4_bar = $PanelContainer/HBoxContainer/Status4/Bar
+@onready var status_4_bar = $PanelContainer/MarginContainer/HBoxContainer/Status4/Bar
 
 func _ready():
 	#status_1_bar.show_percentage = false

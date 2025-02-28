@@ -14,5 +14,5 @@ bubble1_friends = 0
 bubble2_message = "THOUGHT_CLIENT_2"
 bubble2_self = 1
 bubble2_family = 0
-bubble2_work = 2
+bubble2_work = -1
 bubble2_friends = 0

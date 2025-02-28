@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BubbleContent" load_steps=2 format=3 uid="uid://8nptt8pbaist"]
+
+[ext_resource type="Script" path="res://scripts/bubbles_content.gd" id="1_jv2oq"]
+
+[resource]
+script = ExtResource("1_jv2oq")
+problem = "EVENT_UNI_FRIEND_2"
+person = "CHARACTER_UNI_FRIEND"
+bubble1_message = "THOUGHT_UNI_FRIEND_2_1"
+bubble1_self = 1
+bubble1_family = 0
+bubble1_work = 0
+bubble1_friends = -1
+bubble2_message = "THOUGHT_UNI_FRIEND_2_2"
+bubble2_self = 0
+bubble2_family = 0
+bubble2_work = 0
+bubble2_friends = 1

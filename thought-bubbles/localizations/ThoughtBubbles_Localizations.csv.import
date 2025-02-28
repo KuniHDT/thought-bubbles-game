@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cwuh0sv0fhp5y"
+
+[deps]
+
+files=["res://localizations/ThoughtBubbles_Localizations.vi.translation", "res://localizations/ThoughtBubbles_Localizations.en.translation"]
+
+source_file="res://localizations/ThoughtBubbles_Localizations.csv"
+dest_files=["res://localizations/ThoughtBubbles_Localizations.vi.translation", "res://localizations/ThoughtBubbles_Localizations.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

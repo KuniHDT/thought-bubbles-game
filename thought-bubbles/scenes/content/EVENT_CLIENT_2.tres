@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BubbleContent" load_steps=2 format=3 uid="uid://xoe1j4yle1jn"]
+
+[ext_resource type="Script" path="res://scripts/bubbles_content.gd" id="1_ku657"]
+
+[resource]
+script = ExtResource("1_ku657")
+problem = "EVENT_CLIENT_2"
+person = "CHARACTER_CLIENT"
+bubble1_message = "THOUGHT_CLIENT_2_1"
+bubble1_self = -1
+bubble1_family = 0
+bubble1_work = 1
+bubble1_friends = 0
+bubble2_message = "THOUGHT_CLIENT_2_2"
+bubble2_self = 1
+bubble2_family = 0
+bubble2_work = -1
+bubble2_friends = 0

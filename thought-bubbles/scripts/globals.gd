@@ -25,3 +25,12 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.game_over("work")
 	elif stat_friends <= 0:
 		get_tree().current_scene.game_over("friends")
+	
+	if stat_self > 6:
+		stat_self = 6
+	elif stat_family > 6:
+		stat_family = 6
+	elif stat_work > 6:
+		stat_work = 6
+	elif stat_friends > 6:
+		stat_friends = 6

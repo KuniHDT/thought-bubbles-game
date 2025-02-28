@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BubbleContent" load_steps=2 format=3 uid="uid://75socm6v0j30"]
+
+[ext_resource type="Script" path="res://scripts/bubbles_content.gd" id="1_pf2eh"]
+
+[resource]
+script = ExtResource("1_pf2eh")
+problem = "EVENT_DRIVER_2"
+person = "CHARACTER_DRIVER"
+bubble1_message = "THOUGHT_DRIVER_2_1"
+bubble1_self = -1
+bubble1_family = 1
+bubble1_work = 0
+bubble1_friends = 0
+bubble2_message = "THOUGHT_DRIVER_2_2"
+bubble2_self = 2
+bubble2_family = -2
+bubble2_work = 0
+bubble2_friends = 0

@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5iwxgdpycxce"]
+[gd_scene load_steps=7 format=3 uid="uid://b5iwxgdpycxce"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_1x5ng"]
 [ext_resource type="Texture2D" uid="uid://bssy2m7mcdfq0" path="res://graphics/ui/—Pngtree—notebook page vector_13797439.png" id="2_sjjsi"]
 [ext_resource type="Theme" uid="uid://bn6e323w1a45y" path="res://graphics/ui/menu_theme.tres" id="3_apsjt"]
+[ext_resource type="Texture2D" uid="uid://dqseot1vypv3b" path="res://graphics/ui/vietnam.png" id="4_5q0vg"]
+[ext_resource type="Theme" uid="uid://csatvkdaoo3i5" path="res://graphics/ui/menu_buttons_theme.tres" id="4_jsvlq"]
+[ext_resource type="Texture2D" uid="uid://dxh4j86luvxer" path="res://graphics/ui/english.png" id="5_idrie"]
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_1x5ng")
@@ -55,6 +58,30 @@ theme = ExtResource("3_apsjt")
 theme_override_font_sizes/font_size = 50
 text = "QUIT_GAME_BUTTON"
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VN" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(90, 50)
+layout_mode = 2
+theme = ExtResource("4_jsvlq")
+icon = ExtResource("4_5q0vg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="EN" type="Button" parent="CanvasLayer/UI/VBoxContainer/HBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(90, 50)
+layout_mode = 2
+theme = ExtResource("4_jsvlq")
+icon = ExtResource("5_idrie")
+icon_alignment = 1
+expand_icon = true
+
 [node name="Label" type="Label" parent="CanvasLayer"]
 visible = false
 anchors_preset = 8
@@ -75,3 +102,5 @@ horizontal_alignment = 1
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/UI/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/HBoxContainer/VN" to="." method="_on_vn_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/VBoxContainer/HBoxContainer/EN" to="." method="_on_en_pressed"]

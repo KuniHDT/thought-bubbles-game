@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Thought Bubbles"
 config/name_localized={
+"en": "Thought Bubbles",
 "vi": "Nghĩ Bóng"
 }
 run/main_scene="res://scenes/title.tscn"
@@ -45,11 +46,11 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_label/plugin.cfg", "res://addons/resonate/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/resonate/plugin.cfg")
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://localizations/ThoughtBubbles_Localizations - Localization.vi.translation")
+locale/translations=PackedStringArray("res://localizations/ThoughtBubbles_Localizations.en.translation", "res://localizations/ThoughtBubbles_Localizations.vi.translation")
 
 [rendering]
 

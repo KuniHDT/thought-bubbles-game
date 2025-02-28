@@ -13,3 +13,10 @@ func _on_button_2_pressed() -> void:
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	Globals.time_attack = toggled_on
+
+
+func _on_vn_pressed() -> void:
+	TranslationServer.set_locale("vi")
+
+func _on_en_pressed() -> void:
+	TranslationServer.set_locale("en")

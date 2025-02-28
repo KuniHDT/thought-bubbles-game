@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ucfsqiykdu2g"]
 
-[ext_resource type="Texture2D" uid="uid://dk56ajx5udns" path="res://graphics/ui/bubble.png" id="1_tlebp"]
+[ext_resource type="Texture2D" uid="uid://bhpdyasossr6c" path="res://graphics/ui/ThoughtCommands.png" id="1_r0e2i"]
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="2_rdoht"]
 
 [node name="Bubble" type="TextureButton"]
@@ -18,8 +18,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 mouse_filter = 1
-texture_normal = ExtResource("1_tlebp")
-texture_pressed = ExtResource("1_tlebp")
+texture_normal = ExtResource("1_r0e2i")
+texture_pressed = ExtResource("1_r0e2i")
 stretch_mode = 5
 script = ExtResource("2_rdoht")
 
@@ -30,14 +30,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -85.5
-offset_right = 90.0
-offset_bottom = 41.5
+offset_left = -97.0
+offset_top = -76.0
+offset_right = 87.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "text text text text text text rrrwrwattttatwtawtwatawt"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,0 +1,128 @@
+key,vi,en
+START_BUTTON,Bắt Đầu Chơi,Game Start
+QUIT_GAME_BUTTON,Thoát Game,Quit Game
+,,
+CHARACTER_DAD,Ba,Dad
+CHARACTER_MOM,Mẹ,Mom
+CHARACTER_UNCLE,Chú,Uncle
+CHARACTER_AUNT,Cô,Aunt
+CHARACTER_SISTER,Em gái,Sister
+CHARACTER_LOVER,Người yêu,Lover
+CHARACTER_GRANDMA,Bà ngoại,Grandma
+CHARACTER_BOSS,Sếp,Boss
+CHARACTER_INTERN,Thực tập,Intern
+CHARACTER_COLLEAGUE,Đồng nghiệp,Colleague
+CHARACTER_CLIENT,Đối tác,Client
+CHARACTER_CLOSE_FRIEND,Bạn thân,Close Friend
+CHARACTER_UNI_FRIEND,Bạn đại học,University Friend
+CHARACTER_SPORT_FRIEND,Bạn thể thao,Sporty Friend
+CHARACTER_DRIVER,Bác lái xe buýt,Bus Driver
+,,
+VALUE_SELF,Bản thân,Self
+VALUE_FAMILY,Gia đình,Family
+VALUE_WORK,Công việc,Work
+VALUE_FRIENDS,Bạn bè,Friends
+,,
+ENDING_SELF,Bạn đã rơi vào trầm cảm!,You've succumbed to depression!
+ENDING_WORK,Bạn đã bị đuổi việc!,You've been fired!
+ENDING_FRIEND,Bạn đã bị bạn bè xa lánh!,You've been isolated by your friends!
+ENDING_FAMILY,Bạn đã bị gia đình từ mặt!,Your family has disowned you!
+ENDING_WIN,Chúc mừng! Bạn đã cân bằng được cuộc sống!,Congratulations! You've maintained a balanced life!
+,,
+EVENT_MOM,Bà ngoại lại đổ bệnh rồi. Con vào chăm bà giúp mẹ.,Grandma's sick. Can you help her in the hospital?
+THOUGHT_MOM_1,"Mẹ cần mình giúp bà, nhưng mình đang rất bận công việc.",I am having a lot of work right now. Maybe I should refuse.
+THOUGHT_MOM_2,"Mình phải qua ngay, bà đang cần mình.",I should go right away. Grandma needs me.
+EVENT_MOM_2,Lau cái ghế rồng phượng giúp mẹ đi con.,Son. Would you please clean the decorated wood chair?
+THOUGHT_MOM_2_1,"Cái ghế đó khó lau lắm, mình ra ngoài đi chơi thôi.",Cleaning it will take me a whole day. I will find an excuse to go out.
+THOUGHT_MOM_2_2,Dùng tăm bông hay xịt nước nhỉ?,What should I clean this chair with...
+,,
+EVENT_GRANDMA,Cháu cầm ít tiền mua đồ tết nha cháu. Đừng nói bố mẹ biết,I got some spare change for you. Just don't tell your parents.
+THOUGHT_GRANDMA_1,"Bà cho mình tiền, chắc không nên để bố mẹ biết.",Grandma is so nice. There is no need to tell mom and dad.
+THOUGHT_GRANDMA_2,"Bà thật tuyệt vời, mình yêu bà nhất!",It's my lucky day! I love Grandma!
+EVENT_GRANDMA_2,Khi nào cháu dẫn người yêu về ra mắt gia đình vậy?,When will you introduce your girlfriend to us?
+THOUGHT_GRANDMA_2_1,Chắc khi nào rảnh dẫn em ý về chơi cũng không sao.,Maybe I should take her with me next time I visit.
+THOUGHT_GRANDMA_2_2,"Bọn mình chỉ mới quen thôi, dẫn em ấy về chắc không được đâu.",We are just started dating. I don't think I should let her know I have a girlfriend.
+,,
+EVENT_DAD,"Máy của ba bị vấn đề rồi, con vể sửa cho ba với","My computer is not turning on, can you have a look for me?"
+THOUGHT_DAD_1,"Ba cần mình sửa máy, chắc phải ưu tiên ba lần này.",I will go and see what's wrong. Dad's having trouble.
+THOUGHT_DAD_2,"Mình sẽ để lần khác, công việc hiện tại quá bận.","Maybe later, I'm so busy right now."
+EVENT_DAD_2,Mai chở ba lên phường làm giấy tờ nha con?,"I have got some errand to do tomorrow, can you give me a ride?"
+THOUGHT_DAD_1_2,"Mình lỡ hẹn với tụi bạn cấp 3 rồi, chắc phải nhờ con em vậy.",I got to hang out with my friend. Maybe I should ask my sister.
+THOUGHT_DAD_2_2,"Mai không đi với tụi bạn được rồi, lỡ việc của ba thì khổ.",I should call to cancel the party. Dad's errand must be very important.
+,,
+EVENT_SISTER,"Anh ơi, anh chỉ em làm bài tập đi, khó quá nè!","Hey bro, I'm stuck with this homework."
+THOUGHT_SISTER_1,"Em gái cần mình giúp làm bài tập, tối mình rảnh sẽ làm.",Maybe I should do it for her.
+THOUGHT_SISTER_2,Mình nên để em ấy tự lập hơn.,She should be more independent.
+EVENT_SISTER_2,"Anh Hai, xem idol của em nè, ca sĩ Siêu Bé Bự á.","Hey bro, look, this is Big Boy, my idol."
+THOUGHT_SISTER_2_1,Con bé bắt đầu có cá tính rồi nhỉ.,Looks like she's developing her own hobbies.
+THOUGHT_SISTER_2_2,Miễn em nó không để ảnh hưởng việc học là được.,As long as she is not letting it affect her academic performance.
+,,
+EVENT_LOVER,Mai anh đưa em đi chơi mua đồ nha? Sắp tết mà em chưa có gì mặc hết chơnnn.,"Hey babe, can you go shopping with me tomorrow? I don't have anything to wear for Tet at all."
+THOUGHT_LOVER_1,"Người yêu muốn đi chơi, mình nên dành thời gian với cô ấy.",It seems like she just want to spend time with me. I should go with her.
+THOUGHT_LOVER_2,"Mình bận đi tảo mộ với nhà rồi, chắc dời sang hôm khác vậy.",My family is visiting the cemetery today. I can't go with her.
+EVENT_LOVER_2,Nếu em là con gián thì anh còn yêu em không?,Will you still love me if I'm a cockroach?
+THOUGHT_LOVER_2_1,Mình không muốn trả lời câu hỏi này.,I don't want to answer this question.
+THOUGHT_LOVER_2_2,Mình sẽ trả lời em là nhất để cô ấy vừa lòng.,Let's just tell her what she wants to hear.
+,,
+EVENT_UNCLE,Ủa nay về quê không? Mua giúp chú ít đồ nha!,Are you gonna visit your parents home? May you help me buy some stuff please!
+THOUGHT_UNCLE_1,"Chú muốn nhờ mình mua đồ, nhưng mình đang không có thời gian.",I don't have time for this.
+THOUGHT_UNCLE_2,Có lẽ mình sẽ cố gắng mua đồ giúp chú.,I can spare some of my trip to that central market.
+EVENT_UNCLE_2,"Nè con, thằng con chú Tư đầu xóm mới 20 tuổi đã thành influencer nổi tiếng rồi đấy.","Do you know Mr. Forte's son, our neighbor, has made millions from being an influencer?"
+THOUGHT_UNCLE_2_1,Không liên quan đến mình.,I shouldn't let it get into me.
+THOUGHT_UNCLE_2_2,Mình lớn ngần này rồi mà thua kém nhiều người quá.,I'm such a loser.
+,,
+EVENT_AUNT,"Cháu ơi, cháu xin cho em vào công ty với. Em nhà cô thông minh lắm!",Son. Can you get Autie's son a position in your company? Auntie's son is very talented.
+THOUGHT_AUNT_1,"Cô nhờ giúp xin việc cho người thân, mình sẽ thử hỏi.",I can ask my boss if there's any vacant job.
+THOUGHT_AUNT_2,"Thời điểm hiện tại khó khăn, mình không thể giúp được.",I can barely keep my own job. I can't help him.
+EVENT_AUNT_2,Dạo này đi làm ở đâu? Lương bao nhiêu?,Hey. How much do you make a year?? 
+THOUGHT_AUNT_2_1,Mình nên nói khéo để lảng sang việc khác. ,I should change the topic.
+THOUGHT_AUNT_2_2,Mình nên im lặng khỏi trả lời thì hơn.,I don't want to talk about this.
+,,
+EVENT_CLOSE_FRIEND,Ều mai đi câu cá không? Tôi mới mua cần mới này. Carbon fiber đó!!!,Look at my new carbon fiber fishing rod. I'm gonna put it to test tomorrow! You wanna tag along?
+THOUGHT_CLOSE_FRIEND_1,"Bạn thân rủ đi câu cá, nhưng mình có việc bận rồi.","I want to go with him, but I have deadlines."
+THOUGHT_CLOSE_FRIEND_2,Đi câu cá cùng bạn thân có thể giúp giảm stress.,"Deadlines can wait, I should relax."
+EVENT_CLOSE_FRIEND_2,Này bạn ơi cho tôi mượn ít tiền.,"Hey man, I'm currently in a pinch, can you spare some for me?"
+THOUGHT_CLOSE_FRIEND_2_1,"Cho mượn thì mất tiền, mất cả bạn, từ chối thì hơn.","I should refuse, let him have his way will just cost me both money and friendship."
+THOUGHT_CLOSE_FRIEND_2_2,"Thôi, hoàn cảnh nó cũng tội, mình cho mượn nhưng sẽ không đòi lại cho thanh thản.","He's really in a difficult time right now, I will not let him know I don't expect repayment."
+,,
+EVENT_UNI_FRIEND,"Hello, dạo này bồ có khoẻ hông zạ? Cuối tuần mình tổ chức đám cưới, mời bạn sang chung vui nha.","Hello, how're you doing? I am getting married this weekend, please be there with us."
+THOUGHT_UNI_FRIEND_1,"Mình có lịch vào cuối tuần, không thể dự đám cưới.",I already have plans.
+THOUGHT_UNI_FRIEND_2,"Dự đám cưới là cơ hội gặp lại bạn cũ, mình nên đi.","I should attend, it's a chance to catch up with old friends."
+EVENT_UNI_FRIEND_2,Bạn có nhớ ngày xưa tụi mình cùng làm việc nhóm không?,Do you remember the team project when we were still at school?
+THOUGHT_UNI_FRIEND_2_1,"Mình gánh hết mọi thứ, nhưng mình học được rất nhiều.","I pulled all the weight, but I learned a lot."
+THOUGHT_UNI_FRIEND_2_2,Cả nhóm ngày đó thật tuyệt vời.,The team was amazing back then!
+,,
+EVENT_SPORT_FRIEND,Chiều nay sân Đại học Viễn Thông 5 giờ.,We're having a game at 5PM at TeleComm Uni.
+THOUGHT_SPORT_FRIEND_1,"Mình có việc bận gia đình, nên không thể đi.",I already have plans with my family.
+THOUGHT_SPORT_FRIEND_2,"Mình sẽ đi, chắc sẽ rất vui!",This game should be fun.
+EVENT_SPORT_FRIEND_2,Công ty mới lập đội đi thi. Cậu tham gia nhé?,Hey our company is having a game with our rival. You coming?
+THOUGHT_SPORT_FRIEND_2_1,Mình còn tới 5 cái deadline. Mình không muốn đi.,I have 5 deadlines on my butt.
+THOUGHT_SPORT_FRIEND_2_2,Chắc là đi sẽ có thể đoạt giải.,Maybe I can have a chance for a prize.
+,,
+EVENT_BOSS,"Nay có dự án mới về, anh muốn em chỉ đạo dự án này. Em thấy sao?",We just got a new project. I want to you lead it. What do you think?
+THOUGHT_BOSS_1,Nhận dự án này sẽ giúp mình phát triển trong công việc.,This project can get me further in my career.
+THOUGHT_BOSS_2,Mình nên tập trung vào gia đình lúc này.,"My family need me now, I should refuse,"
+EVENT_BOSS_2,Anh không cần biết em tối nay đi đâu. Em phải tăng ca cho anh vì tối nay phải giao cho khách rồi.,I don't care what's your plan tonight. This customer need us to deliver the site before tomorrow. You're gonna have to work overtime.
+THOUGHT_BOSS_2_1,Mình nên báo cáo hành vi này với cấp trên.,I should report his behavior to superiors.
+THOUGHT_BOSS_2_2,Có vẻ mình phải hủy hẹn và thức trắng đêm rồi.,Looks like I will have to cancel my date and pull an all-nighter.
+,,
+EVENT_CLIENT,Thiết kế website hiện tại chị thấy chưa được hiện đại và chưa thể hiện được giá trị của công ty. Em sửa lại giúp chị.,I feel like the current page design is not modern enough and does not reflect the company's value and mission. I need this to be done over.
+THOUGHT_CLIENT_1,Mình cần cải thiện thiết kế website để đáp ứng yêu cầu khách hàng.,I should have the page design reworked to fulfill this demand.
+THOUGHT_CLIENT_2,Sử dụng thiết kế hiện tại sẽ giúp đảm bảo tiến độ.,"The current design is ok, I don't think I can made it before live date."
+EVENT_CLIENT_2,"Em ơi, có thể bớt tí chi phí website cho anh không? Chứ anh thiếu budget.",Can you review the website cost? I don't think I have the budget for this contract.
+THOUGHT_CLIENT_2_1,Mình có thể cắt bớt ít tiền hoa hồng để khách hàng vui vẻ hơn.,I can give up some of my commission bonus to help this poor client.
+THOUGHT_CLIENT_2_2,Tiền nào của nấy. Mình sẽ không thỏa hiệp.,He gets what he paid for.
+,,
+EVENT_COLLEAGUE,Ê tôi giờ có dự án sử dụng công nghệ ông làm ở dự án trước. Ông làm buổi chia sẻ kinh nghiệm cho tụi tôi được không?,Hey I got another project that use the same source code with your previous project. Can you share some insight for us on a meeting?
+THOUGHT_COLLEAGUE_1,Chia sẻ kinh nghiệm sẽ giúp đồng nghiệp và mình học hỏi thêm.,"Directly sharing on a conference will boost our learning experience, and relationship."
+THOUGHT_COLLEAGUE_2,Mình nên gửi tài liệu thay vì làm buổi chia sẻ.,Maybe documentation is already enough.
+EVENT_COLLEAGUE_2,"Này ông bạn, tối nay tui bị tai nạn rồi, ông tiếp khách hộ tui nha.","Hey I got into an incident, can you take over my client for me?"
+THOUGHT_COLLEAGUE_2_1,"Mình không quen khách này. Lỡ mà hỏng việc thì không ổn, từ chối thôi.","I'm not familiar with this client, better turn them down."
+THOUGHT_COLLEAGUE_2_2,Giúp đỡ đồng nghiệp là việc nên làm. Hôm đó mình cũng không bận. Giúp ông ấy vậy.,Helping a colleague in need is helping myself. I should lend a hand.
+,,
+EVENT_DRIVER,"Cuộc sống cũng như là lái xe vậy. Không phải lái một đường thẳng mà phải có lúc nghiêng trái, nghiêng phải một tí, điều chỉnh tùy theo hoàn cảnh.","Life is a roadtrip. The road is never straight-forward, it has up, down and bumpy. We need to adapt."
+THOUGHT_DRIVER_1,Cuộc nói chuyện này giúp mình hiểu hơn về cuộc sống.,I got enlightened.
+THOUGHT_DRIVER_2,"Mình thấy bác lại nói đạo lý, nhưng cũng có lý.","This is too much of a platitude, even so he has a point."
+EVENT_DRIVER_2,Hôm qua con em con nó đi xe bác nhưng quên trả tiền.,Your sister has pay me the taxi fair.
+THOUGHT_DRIVER_2_1,Cái con bé này. Thôi để mình trả tiền giúp nó.,Seems like I should help her out this time.
+THOUGHT_DRIVER_2_2,Chút nữa phải về bảo con bé gửi lại tiền xe cho mình.,I will get her to pay me back later.

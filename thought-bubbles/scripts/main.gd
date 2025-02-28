@@ -9,23 +9,37 @@ extends Node2D
 var problems = []
 
 func _init():
-	TranslationServer.set_locale("vi")
+	pass
 
 func _ready():
 	problems.append(load("res://scenes/content/EVENT_AUNT.tres"))
+	problems.append(load("res://scenes/content/EVENT_AUNT_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_BOSS.tres"))
+	problems.append(load("res://scenes/content/EVENT_BOSS_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_CLIENT.tres"))
+	problems.append(load("res://scenes/content/EVENT_CLIENT_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_CLOSE_FRIEND.tres"))
+	problems.append(load("res://scenes/content/EVENT_CLOSE_FRIEND_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_COLLEAGUE.tres"))
+	problems.append(load("res://scenes/content/EVENT_COLLEAGUE_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_DAD.tres"))
+	problems.append(load("res://scenes/content/EVENT_DAD_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_DRIVER.tres"))
+	problems.append(load("res://scenes/content/EVENT_DRIVER_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_GRANDMA.tres"))
+	problems.append(load("res://scenes/content/EVENT_GRANDMA_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_LOVER.tres"))
+	problems.append(load("res://scenes/content/EVENT_LOVER_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_MOM.tres"))
+	problems.append(load("res://scenes/content/EVENT_MOM_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_SISTER.tres"))
+	problems.append(load("res://scenes/content/EVENT_SISTER_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_SPORT_FRIEND.tres"))
+	problems.append(load("res://scenes/content/EVENT_SPORT_FRIEND_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_UNCLE.tres"))
+	problems.append(load("res://scenes/content/EVENT_UNCLE_2.tres"))
 	problems.append(load("res://scenes/content/EVENT_UNI_FRIEND.tres"))
+	problems.append(load("res://scenes/content/EVENT_UNI_FRIEND_2.tres"))
 	
 	problems.shuffle()
 	

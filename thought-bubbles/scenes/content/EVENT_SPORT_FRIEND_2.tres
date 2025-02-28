@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BubbleContent" load_steps=2 format=3 uid="uid://dic0m0xsh7vuo"]
+
+[ext_resource type="Script" path="res://scripts/bubbles_content.gd" id="1_vl4fx"]
+
+[resource]
+script = ExtResource("1_vl4fx")
+problem = "EVENT_SPORT_FRIEND_2"
+person = "CHARACTER_SPORT_FRIEND"
+bubble1_message = "THOUGHT_SPORT_FRIEND_2_1"
+bubble1_self = -1
+bubble1_family = 0
+bubble1_work = 2
+bubble1_friends = -1
+bubble2_message = "THOUGHT_SPORT_FRIEND_2_2"
+bubble2_self = 1
+bubble2_family = 0
+bubble2_work = -1
+bubble2_friends = 1
